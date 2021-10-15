@@ -1,0 +1,104 @@
+
+
+@media screen and (min-width: 1366px) {
+
+
+
+    .container {
+
+        font-size: 1.2rem;
+    }
+
+    .container #main {
+
+        max-width: 1300px;
+        grid-template-areas: 
+        
+        "budget total"
+        "expenses table"
+        
+
+        ;
+        grid-column-gap: 2em;
+        
+    }
+
+
+    #main .main-card {
+
+        margin-bottom: 0;
+    }
+
+    #main .main-card form {
+
+        padding: 1rem;
+    }
+
+
+    #main .main-card form input {
+
+        padding: 10px;
+        margin-top: 5px;
+    }
+
+    #main .main-card form .form-control .error {
+
+        /* bottom: -60px; */
+        /* left: 25%; */
+        padding: 5px;
+        justify-content: center;
+    }
+
+    #main .main-card form button {
+
+        margin-top: 15px;
+        transition: all 0.35s ease;
+        
+    }
+
+
+    #main .main-card #budget-form button:hover {
+
+        color: var(--budget-green);
+        background: transparent;
+    }
+
+    #main .main-card #expense-form button:hover {
+
+        color: var(--expense-red);
+        background: transparent;
+    }
+
+
+
+    #main .budget {
+
+        
+        max-width: 600px;
+    }
+
+
+    #main .expenses {
+
+        max-width: 600px;
+        
+    }
+
+    #main .expense-details {
+
+        max-width: 800px;
+    }
+
+
+    #main #showcase {
+
+        grid-area: total;
+        /* height: 70%; */
+    }
+    
+
+    #main #showcase .sub-card .fas, #main #showcase .sub-card .far{
+
+        font-size: 2rem;
+    }
+}

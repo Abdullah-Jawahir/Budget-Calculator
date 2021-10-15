@@ -1,0 +1,17 @@
+
+@media screen and (min-width: 1024px) {
+    
+    #main .main-card form .form-control .error {
+
+        bottom: -40px;
+        width: 200px;
+        
+    }
+
+
+    #main #showcase {
+
+        grid-area: total;
+        height: 100%;
+    }
+}

@@ -1,0 +1,94 @@
+
+@media screen and (min-width: 768px) {
+    
+    body {
+
+        overflow-x: hidden;
+    }
+
+    body::-webkit-scrollbar {
+
+        display: none;
+    }
+
+    .container {
+
+        padding: 0;
+        margin: 0;
+        
+    }
+
+    .container #main {
+
+        grid-template-areas: 
+        
+        "budget expenses"
+        "total total"
+        "table table"
+        
+
+        ;
+        grid-column-gap: 2rem;
+        grid-row-gap: 5rem;
+        
+    }
+
+    #main .main-card form .form-control .error {
+
+        padding: 5px;
+        bottom: -60px;
+    }
+
+    #main .main-card {
+
+        margin-bottom: 0;
+    }
+
+    #main .budget {
+
+        grid-area: budget;
+    }
+
+    #main .budget #budget-form{
+
+        height: 100%;
+        justify-content: space-evenly;
+    }
+
+
+    #main .expenses {
+
+        grid-area: expenses;
+        
+    }
+
+    #main .expense-details {
+
+        grid-area: table;
+        width: 100%;
+        /* border: 1px solid; */
+        
+    }
+
+
+    #main #showcase {
+
+        grid-area: total;
+        height: 100%;
+        width: 100%;
+    }
+
+    #main #showcase .sub-card {
+
+        height: 100%;
+        margin-right: 20px;
+        
+    }
+    
+    #main .main-card form {
+
+        padding: 1rem;
+    }
+
+
+}

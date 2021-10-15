@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget App</title>
+
+    <link rel="stylesheet" href="./FontAwesome/css/all.css">
+</head>
+<body>
+    
+    <div class="container">
+        <h1>budget app</h1>
+
+        <main id="main">
+
+            <div class="budget">
+                <form id="budget-form">
+
+                    <div class="form-control">
+                        <label for="budget-amount">Your Budget Amount</label>
+                        <input type="number" id="budget-amount" placeholder="$0" autofocus>
+                    </div>
+
+                    <div class="form-control">
+                        <label for="expense-name">Your Expense</label>
+                        <input type="text" id="expense-name" placeholder="Expense title">
+                    </div>
+
+                    <div class="form-control">
+                        <label for="expense-amount">Expense Amount</label>
+                        <input type="number" id="expense-amount" placeholder="$0">
+                    </div>
+
+                    <div class="form-control">
+                        <button type="submit">
+                            Calculate
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+
+
+            <div id="showcase">
+
+                <div class="card">
+                    <p>budget</p>
+                    <i class="fas fa-money-bill-alt"></i>
+                    <p id="total-budget">$ 0</p>
+                </div>
+
+                <div class="card">
+                    <p>expenses</p>
+                    <i class="far fa-credit-card"></i>
+                    <p id="total-expenses">$ 0</p>
+                </div>
+
+                <div class="card">
+                    <p>balance</p>
+                    <i class="fas fa-dollar-sign"></i>
+                    <p id="total-balance">$ 0</p>
+                </div>
+
+            </div>
+
+
+            <div class="expense-details">
+
+                <table id="expense-details-table">
+                    <tr>
+                        <th>Expense Title</th>
+                        <th>Expense Amount</th>
+                    </tr>
+                </table>
+
+            </div>
+        </main>
+    </div>
+    
+
+<script src="./app2.js"></script>
+</body>
+</html>

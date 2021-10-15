@@ -1,0 +1,262 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+
+    --budget-green: rgb(31, 187, 31);
+    --expense-red: rgb(218, 29, 54);
+    --balance-blue: rgb(56, 122, 245);
+    --error-red: rgb(235, 51, 51);
+}
+
+body {
+
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    overflow-x: hidden;
+}
+
+label, h1{
+
+    color: rgba(0, 0, 0, 0.5);
+}
+
+button {
+
+    cursor: pointer;
+}
+
+.container {
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.container h1 {
+
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 0.5em;
+    padding: 0.5em;
+}
+
+.container #main {
+
+    display: grid;
+    min-width: 270px;
+    width: 90%;
+    margin: auto;
+
+}
+
+#main .main-card {
+
+    margin-bottom: 2em;
+    
+}
+
+#main .main-card form {
+
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: .6em;
+    display: flex;
+    flex-direction: column;
+}
+
+#main .main-card #budget-form {
+
+    border-color: var(--budget-green);
+}
+
+#main .main-card #expense-form {
+
+    border-color: var(--expense-red);
+}
+
+#main .main-card form .form-control {
+
+    width: 100%;
+    margin-bottom: 10px;
+    /* font-size: 16px; */
+}
+
+#main .main-card form .amount {
+
+    position: relative;
+}
+
+#main .main-card form .form-control input {
+
+    padding: 5px;
+    width: 100%;
+    letter-spacing: 0.2vw;
+    font-size: 14px;
+}
+
+#main .main-card form .form-control .error {
+
+    border: 2px solid black;
+    width: 150px;
+    padding: 10px;
+    position: absolute;
+    /* bottom: -140%; */
+    /* left: 20%; */
+    bottom: -70px;
+    left: 25%;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    border-radius: 3px;
+    background-color: var(--error-red);
+    /* z-index: 100; */
+    visibility: hidden;
+    color: aliceblue;
+    font-size: 1rem;
+}
+
+#main .main-card form .form-control .error i {
+
+    margin-top: 5px;
+}
+
+#main .main-card form .form-control .error p {
+
+    margin-left: 10px;
+}
+
+#main .main-card form .form-control .error::before {
+
+    position: absolute;
+    content: '';
+    height: 13px;
+    width: 13px;
+    border-left: 2px solid black;
+    border-top: 2px solid black;
+    /* top: -16%; */
+    left: 12px;
+    top: -9px;
+    transform: rotate(45deg);
+    background-color: inherit;
+    
+}
+
+
+#main .main-card form .form-control #budget-error::before {
+
+    /* top: -16%; */
+    top: -9px;
+}
+
+
+#main .main-card form .form-control button {
+
+    padding: 5px;
+    width: 100%;
+    font-weight: bold;
+    border-radius: 3px;
+    color: aliceblue;
+    text-transform: uppercase;
+}
+
+#main .main-card #budget-form .form-control input {
+
+    outline-color: var(--budget-green);
+}
+
+
+#main .main-card #budget-form .form-control button {
+
+    background-color: var(--budget-green);
+    border-color: var(--budget-green);
+}
+
+#main .main-card #expense-form .form-control input {
+
+    outline-color: var(--expense-red);
+}
+
+#main .main-card #expense-form .form-control button {
+
+    background-color: var(--expense-red);
+    border-color: var(--expense-red);
+}
+
+#main #showcase {
+
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+}
+
+#main #showcase .sub-card {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-transform: capitalize;
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+#main #showcase .budget-card {
+
+    color: var(--budget-green);
+}
+
+#main #showcase .expense-card {
+
+    color: var(--expense-red);
+}
+
+#main #showcase .balance-card {
+
+    color: var(--balance-blue);
+}
+
+#main .expense-details #expense-details-table {
+
+    width: 100%;
+}
+
+
+#expense-details-table th, #expense-details-table td{
+
+    padding: 5px;
+    padding-left: 0;
+    text-align: left;
+    color: var(--expense-red);
+}
+
+#expense-details-table th {
+
+    color: rgba(0, 0, 0, 0.5);
+}
+
+#expense-details-table tr i {
+
+    cursor: pointer;
+}
+
+#expense-details-table tr #edit-icon {
+
+    color: var(--balance-blue);
+}
+
+
+
+
+
+
+
+
+

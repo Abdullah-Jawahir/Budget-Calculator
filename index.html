@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget App</title>
+
+    <link rel="stylesheet" href="./FontAwesome/css/all.css">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./tablet.css">
+    <link rel="stylesheet" href="./laptop-md.css">
+    <link rel="stylesheet" href="./laptop-lg.css">
+</head>
+<body>
+    
+    <div class="container">
+        <h1>budget calculator</h1>
+
+        <main id="main">
+
+            <div class="budget main-card">
+                <form id="budget-form">
+
+                    <div class="form-control amount">
+                        <label for="budget-amount">Please Enter your Budget Amount</label>
+                        <input type="number" id="budget-amount" placeholder="$0" autofocus>
+                        <div class="error" id="budget-error">
+                            <i class="fas fa-exclamation"></i><p>Field cannot be empty</p>
+                        </div>
+                    </div>
+
+                    <div class="form-control">
+                        <button type="submit">
+                            My Budget
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+
+            <!-- ----- -->
+
+
+
+            
+            <div class="expenses main-card">
+                <form id="expense-form">
+
+                    <div class="form-control">
+                        <label for="expense-name">Please Enter your Expense</label>
+                        <input type="text" id="expense-name" placeholder="Expense title" autocomplete="off">
+                    </div>
+
+                    <div class="form-control amount">
+                        <label for="expense-amount">Please Enter your Expense Amount</label>
+                        <input type="number" id="expense-amount" placeholder="$0">
+                        <div class="error" id="expense-error">
+                            <i class="fas fa-exclamation"></i>  <p>Field cannot be empty</p>
+                        </div>
+                    </div>
+                    
+                    <div class="form-control">
+                        <button type="submit">
+                            My Expenses
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+
+
+            <div id="showcase" class="main-card">
+
+                <div class="sub-card budget-card">
+                    <p>budget</p>
+                    <i class="fas fa-money-bill-alt"></i>
+                    <p id="total-budget">$ 0</p>
+                </div>
+
+                <div class="sub-card expense-card">
+                    <p>expenses</p>
+                    <i class="far fa-credit-card"></i>
+                    <p id="total-expenses">$ 0</p>
+                </div>
+
+                <div class="sub-card balance-card">
+                    <p>balance</p>
+                    <i class="fas fa-dollar-sign"></i>
+                    <p id="total-balance">$ 0</p>
+                </div>
+
+            </div>
+
+
+            <div class="expense-details main-card">
+
+                <table id="expense-details-table">
+                    <tr>
+                        <th>Expense Title</th>
+                        <th>Expense Amount</th>
+                    </tr>
+                </table>
+
+            </div>
+        </main>
+    </div>
+    
+
+<script src="./app.js"></script>
+</body>
+</html>
